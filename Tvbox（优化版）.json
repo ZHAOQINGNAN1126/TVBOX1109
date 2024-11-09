@@ -1,0 +1,308 @@
+{
+  "general": {
+    "searchable": 1,
+    "quickSearch": 1
+  },
+  "spider": "http://cdn.qiaoji8.com/fix24108.jar;md5;12f37c8466d7133438b2560d8e1b190e",
+  "wallpaper": "http://www.kf666888.cn/api/tvbox/img",
+  
+  "search": {
+    "enabled": true,
+    "description": "通过关键词快速查找相关资源。",
+    "method": "local", 
+    "filterableFields": ["name", "key", "resources.title"]
+  },
+
+  "lives": [
+    {
+      "group": "redirect",
+      "channels": [
+        {
+          "name": "live",
+          "urls": ["proxy://do=live&type=txt&ext="]
+        }
+      ]
+    }
+  ],
+
+  "sites": [
+    {
+      "key": "南瓜",
+      "name": "南瓜┃App",
+      "type": 3,
+      "api": "csp_NanGua",
+      "playerType": 2,
+      "filterable": 1,
+      "ext": {}
+    },
+    {
+      "key": "天天",
+      "name": "天天┃App",
+      "type": 3,
+      "api": "csp_TTian",
+      "playerType": 1,
+      "ext": {
+        "url": "baHR0cDovL29wLnlzZHFqcy5jbg==",
+        "headers": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "key": "热播",
+      "name": "热播┃App",
+      "type": 3,
+      "api": "csp_Rebot",
+      "playerType": 1,
+      "ext": {
+        "url": "caHR0cDovL3YucmJvdHYuY24=",
+        "headers": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "key": "追剧",
+      "name": "追剧┃App",
+      "type": 3,
+      "api": "csp_TTian",
+      "playerType": 1,
+      "ext": {
+        "url": "daHR0cDovL3oua3pqdHYuY29t",
+        "headers": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "key": "现代",
+      "name": "现代┃App",
+      "type": 3,
+      "api": "csp_Xdai",
+      "playerType": 1,
+      "ext": {
+        "url": "caHR0cDovL2FwcC5icm92b2QuY29tfDE1MjQ3MjA1MzMzamFyb2R8MTUyNDcyMDUzMzNqYXJvZA==",
+        "headers": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "key": "思源",
+      "name": "思源┃App",
+      "type": 3,
+      "api": "csp_Syys",
+      "playerType": 1,
+      "ext": {
+        "url": "caHR0cDovLzguMjEwLjM0LjE0MzoxMTIyfHpodWl5aTg4ODg4NjY2NjZ8emh1aXlpODg4ODg2NjY2Ng==",
+        "headers": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    }
+    // 可以继续添加更多站点
+  ],
+
+  "parsingMethods": [
+    {
+      "name": "解析聚合",
+      "type": 3,
+      "url": "Demo"
+    },
+    {
+      "name": "Json轮询",
+      "type": 2,
+      "url": "Sequence"
+    },
+    {
+      "name": "巧技",
+      "type": 1,
+      "url": "http://pan.qiaoji8.com/tvbox/neibu.php?url=",
+      "ext": {
+        "flag": [
+          "qq", "腾讯", "qiyi", "爱奇艺", "youku", "优酷", "sohu"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    },
+    {
+      "name": "巧技二",
+      "type": 1,
+      "url": "http://pan.qiaoji8.com/tvbox/gouzi.php?url=",
+      "ext": {
+        "flag": [
+          "qq", "腾讯", "qiyi", "爱奇艺", "youku", "优酷", "sohu", "bilibili", "NetFilx"
+        ],
+        "header": {
+          "User-Agent": "okhttp/4.9.1"
+        }
+      }
+    }
+    // 其他解析方法
+  ],
+
+  "decodeSettings": [
+    {
+      "group": "软解码",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "dns_cache_timeout",
+          "value": "600000000"
+        }
+      ]
+    },
+    {
+      "group": "硬解码",
+      "options": [
+        {
+          "category": 4,
+          "name": "opensles",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "overlay-format",
+          "value": "842225234"
+        },
+        {
+          "category": 4,
+          "name": "framedrop",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "soundtouch",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "start-on-prepared",
+          "value": "1"
+        },
+        {
+          "category": 1,
+          "name": "http-detect-range-support",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "fflags",
+          "value": "fastseek"
+        },
+        {
+          "category": 2,
+          "name": "skip_loop_filter",
+          "value": "48"
+        },
+        {
+          "category": 4,
+          "name": "reconnect",
+          "value": "1"
+        },
+        {
+          "category": 4,
+          "name": "enable-accurate-seek",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-auto-rotate",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-handle-resolution-change",
+          "value": "0"
+        },
+        {
+          "category": 4,
+          "name": "mediacodec-hevc",
+          "value": "0"
+        },
+        {
+          "category": 1,
+          "name": "dns_cache_timeout",
+          "value": "600000000"
+        }
+      ]
+    }
+  ]
+}
