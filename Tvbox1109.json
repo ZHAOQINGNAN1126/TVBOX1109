@@ -55,6 +55,7 @@
       "type": 3,
       "api": "csp_Rebot",
       "playerType": 1,
+      "filterable": 1,
       "ext": {
         "url": "caHR0cDovL3YucmJvdHYuY24=",
         "headers": {
@@ -68,6 +69,7 @@
       "type": 3,
       "api": "csp_TTian",
       "playerType": 1,
+      "filterable": 1,
       "ext": {
         "url": "daHR0cDovL3oua3pqdHYuY29t",
         "headers": {
@@ -81,6 +83,7 @@
       "type": 3,
       "api": "csp_Xdai",
       "playerType": 1,
+      "filterable": 1,
       "ext": {
         "url": "caHR0cDovL2FwcC5icm92b2QuY29tfDE1MjQ3MjA1MzMzamFyb2R8MTUyNDcyMDUzMzNqYXJvZA==",
         "headers": {
@@ -94,6 +97,7 @@
       "type": 3,
       "api": "csp_Syys",
       "playerType": 1,
+      "filterable": 1,
       "ext": {
         "url": "caHR0cDovLzguMjEwLjM0LjE0MzoxMTIyfHpodWl5aTg4ODg4NjY2NjZ8emh1aXlpODg4ODg2NjY2Ng==",
         "headers": {
